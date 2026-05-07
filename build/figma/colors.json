@@ -1,14 +1,6 @@
 {
   "global": {
     "colors": {
-      "black": {
-        "$type": "color",
-        "$value": "#000000"
-      },
-      "white": {
-        "$type": "color",
-        "$value": "#ffffff"
-      },
       "orange": {
         "100": {
           "$type": "color",
@@ -47,9 +39,19 @@
           "$value": "#7b341e"
         }
       },
-      "green": {
-        "$type": "color",
-        "$value": "#00ff00"
+      "basic": {
+        "black": {
+          "$type": "color",
+          "$value": "#000000"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "green": {
+          "$type": "color",
+          "$value": "#00ff00"
+        }
       }
     }
   },
