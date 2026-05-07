@@ -9,6 +9,10 @@
         "$type": "color",
         "$value": "#ffffff"
       },
+      "yellow": {
+        "$type": "color",
+        "$value": "#ffff00"
+      },
       "orange": {
         "100": {
           "$type": "color",
@@ -47,10 +51,6 @@
           "$value": "#7b341e"
         }
       },
-      "yellow": {
-        "$type": "color",
-        "$value": "#ffff00"
-      }
     }
   },
   "$themes": [],
