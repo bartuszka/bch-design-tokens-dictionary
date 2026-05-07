@@ -52,11 +52,5 @@
         }
       },
     }
-  },
-  "$themes": [],
-  "$metadata": {
-    "tokenSetOrder": [
-      "global"
-    ]
   }
 }
