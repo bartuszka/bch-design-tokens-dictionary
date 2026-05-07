@@ -36,7 +36,17 @@
         "900": {
           "$value": "#7b341e"
         }
+      },
+      "yellow": {
+        "$type": "color",
+        "$value": "#ffff00"
       }
     }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "global"
+    ]
   }
 }
