@@ -1,0 +1,39 @@
+{
+  "global": {
+    "color": {
+      "blue-500": {
+        "$value": "#1a73e8",
+        "$type": "color"
+      },
+      "gray-100": {
+        "$value": "#f8f9fa",
+        "$type": "color"
+      }
+    },
+    "spacing": {
+      "base": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "md": {
+        "$value": "{spacing.base} * 4",
+        "$type": "dimension"
+      }
+    }
+  },
+  "semantic": {
+    "brand": {
+      "primary": {
+        "$value": "{global.color.blue-500}",
+        "$type": "color",
+        "$description": "Główny kolor marki używany w akcjach (CTA)."
+      }
+    },
+    "background": {
+      "default": {
+        "$value": "{global.color.gray-100}",
+        "$type": "color"
+      }
+    }
+  }
+}
