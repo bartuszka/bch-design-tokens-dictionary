@@ -1,39 +1,49 @@
 {
   "global": {
     "colors": {
-      "$type": "color",
       "black": {
+        "$type": "color",
         "$value": "#000000"
       },
       "white": {
+        "$type": "color",
         "$value": "#ffffff"
       },
       "orange": {
         "100": {
+          "$type": "color",
           "$value": "#fffaf0"
         },
         "200": {
+          "$type": "color",
           "$value": "#feebc8"
         },
         "300": {
+          "$type": "color",
           "$value": "#fbd38d"
         },
         "400": {
+          "$type": "color",
           "$value": "#f6ad55"
         },
         "500": {
+          "$type": "color",
           "$value": "#ed8936"
         },
         "600": {
+          "$type": "color",
           "$value": "#dd6b20"
         },
+        "$type": "color",
         "700": {
           "$value": "#c05621"
         },
         "800": {
+          "$type": "color",
           "$value": "#9c4221"
         },
         "900": {
+          "$type": "color",
           "$value": "#7b341e"
         }
       },
