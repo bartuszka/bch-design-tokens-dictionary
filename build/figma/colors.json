@@ -52,6 +52,16 @@
           "$type": "color",
           "$value": "#00ff00"
         }
+      },
+      "blues": {
+        "light-blue": {
+          "$type": "color",
+          "$value": "#ccccff"
+        },
+        "dark-blue": {
+          "$type": "color",
+          "$value": "#0000ff"
+        }
       }
     }
   },
