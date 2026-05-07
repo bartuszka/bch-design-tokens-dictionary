@@ -62,6 +62,16 @@
           "$type": "color",
           "$value": "#0000ff"
         }
+      },
+      "reds": {
+        "light-red": {
+          "$type": "color",
+          "$value": "#ffcccc"
+        },
+        "dark-red": {
+          "$type": "color",
+          "$value": "#ff0000"
+        }
       }
     }
   },
