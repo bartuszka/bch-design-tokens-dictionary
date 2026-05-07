@@ -46,7 +46,17 @@
           "$type": "color",
           "$value": "#7b341e"
         }
+      },
+      "green": {
+        "$type": "color",
+        "$value": "#00ff00"
       }
     }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "global"
+    ]
   }
 }
