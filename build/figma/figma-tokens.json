@@ -1,100 +1,80 @@
 {
-  "": {
-    "core": {
-      "blue": {
-        "300": {
-          "$type": "color",
-          "$value": "#3333ff"
-        },
-        "600": {
-          "$type": "color",
-          "$value": "#6666ff"
-        },
-        "900": {
-          "$type": "color",
-          "$value": "#9999ff"
-        }
+  "": {},
+  "color": {},
+  "core/all": {
+    "white": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
       },
-      "neutral": {
-        "300": {
-          "$type": "color",
-          "$value": "#333333"
-        },
-        "600": {
-          "$type": "color",
-          "$value": "#666666"
-        },
-        "900": {
-          "$type": "color",
-          "$value": "#999999"
-        },
-        "white": {
-          "$type": "color",
-          "$value": "#ffffff"
-        },
-        "black": {
-          "$type": "color",
-          "$value": "#000000"
-        }
-      },
-      "red": {
-        "300": {
-          "$type": "color",
-          "$value": "#ff3333"
-        },
-        "600": {
-          "$type": "color",
-          "$value": "#ff6666"
-        },
-        "900": {
-          "$type": "color",
-          "$value": "#ff9999"
-        }
-      }
+      "$type": "color",
+      "$value": "#ffffff"
     },
-    "semantic": {
-      "dark": {
-        "primary-color": {
-          "$type": "color",
-          "$value": "#333333"
-        },
-        "secondary-color": {
-          "$type": "color",
-          "$value": "#999999"
-        },
-        "primary-background-color": {
-          "$type": "color",
-          "$value": "#ffffff"
-        },
-        "secondary-background-color": {
-          "$type": "color",
-          "$value": "#000000"
-        }
+    "black": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
       },
-      "light": {
-        "primary-color": {
-          "$type": "color",
-          "$value": "#999999"
-        },
-        "secondary-color": {
-          "$type": "color",
-          "$value": "#333333"
-        },
-        "primary-background-color": {
-          "$type": "color",
-          "$value": "#000000"
-        },
-        "secondary-background-color": {
-          "$type": "color",
-          "$value": "#ffffff"
-        }
-      }
+      "$type": "color",
+      "$value": "#000000"
+    }
+  },
+  "semantic/dark": {
+    "primary-text-color": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "color",
+      "$value": "{black}"
+    },
+    "secondary-text-color": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "color",
+      "$value": "{white}"
+    }
+  },
+  "semantic/light": {
+    "primary-text-color": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "color",
+      "$value": "{white}"
+    },
+    "secondary-text-color": {
+      "$extensions": {
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.hiddenFromPublishing": false
+      },
+      "$type": "color",
+      "$value": "{black}"
     }
   },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      ""
+      "",
+      "color",
+      "core/all",
+      "semantic/dark",
+      "semantic/light"
     ]
   }
 }
