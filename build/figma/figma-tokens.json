@@ -1,146 +1,60 @@
 {
-  "core-colors/all": {
-    "300": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
+  "": {
+    "blue": {
+      "300": {
+        "$type": "color",
+        "$value": "#3333ff"
       },
-      "$type": "color",
-      "$value": "#333333"
+      "600": {
+        "$type": "color",
+        "$value": "#6666ff"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#9999ff"
+      }
     },
-    "600": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
+    "neutral": {
+      "300": {
+        "$type": "color",
+        "$value": "#333333"
       },
-      "$type": "color",
-      "$value": "#666666"
+      "600": {
+        "$type": "color",
+        "$value": "#666666"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#999999"
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "black": {
+        "$type": "color",
+        "$value": "#000000"
+      }
     },
-    "900": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
+    "red": {
+      "300": {
+        "$type": "color",
+        "$value": "#ff3333"
       },
-      "$type": "color",
-      "$value": "#999999"
-    },
-    "white": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
+      "600": {
+        "$type": "color",
+        "$value": "#ff6666"
       },
-      "$type": "color",
-      "$value": "#ffffff"
-    },
-    "black": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "#000000"
-    }
-  },
-  "semantic-colors/dark": {
-    "color-primary": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "{300}"
-    },
-    "color-secondary": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "{900}"
-    },
-    "color-background-primary": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "{white}"
-    },
-    "color-background-secondary": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "{black}"
-    }
-  },
-  "semantic-colors/light": {
-    "color-primary": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "{900}"
-    },
-    "color-secondary": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "{300}"
-    },
-    "color-background-primary": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "{black}"
-    },
-    "color-background-secondary": {
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
-        "com.figma.hiddenFromPublishing": false
-      },
-      "$type": "color",
-      "$value": "{white}"
+      "900": {
+        "$type": "color",
+        "$value": "#ff9999"
+      }
     }
   },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "core-colors/all",
-      "semantic-colors/dark",
-      "semantic-colors/light"
+      ""
     ]
   }
 }
