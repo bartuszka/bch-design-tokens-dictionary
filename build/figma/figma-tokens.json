@@ -1,6 +1,5 @@
 {
-  "": {},
-  "color": {
+  "": {
     "core": {
       "blue": {
         "300": {
@@ -95,8 +94,7 @@
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "",
-      "color"
+      ""
     ]
   }
 }
