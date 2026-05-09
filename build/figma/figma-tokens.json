@@ -1,62 +1,62 @@
 {
-  "": {
-    "color": {
-      "blue": {
-        "300": {
-          "$type": "color",
-          "$value": "#3333ff"
-        },
-        "600": {
-          "$type": "color",
-          "$value": "#6666ff"
-        },
-        "900": {
-          "$type": "color",
-          "$value": "#9999ff"
-        }
+  "": {},
+  "color": {
+    "blue": {
+      "300": {
+        "$type": "color",
+        "$value": "#3333ff"
       },
-      "neutral": {
-        "300": {
-          "$type": "color",
-          "$value": "#333333"
-        },
-        "600": {
-          "$type": "color",
-          "$value": "#666666"
-        },
-        "900": {
-          "$type": "color",
-          "$value": "#999999"
-        },
-        "white": {
-          "$type": "color",
-          "$value": "#ffffff"
-        },
-        "black": {
-          "$type": "color",
-          "$value": "#000000"
-        }
+      "600": {
+        "$type": "color",
+        "$value": "#6666ff"
       },
-      "red": {
-        "300": {
-          "$type": "color",
-          "$value": "#ff3333"
-        },
-        "600": {
-          "$type": "color",
-          "$value": "#ff6666"
-        },
-        "900": {
-          "$type": "color",
-          "$value": "#ff9999"
-        }
+      "900": {
+        "$type": "color",
+        "$value": "#9999ff"
+      }
+    },
+    "neutral": {
+      "300": {
+        "$type": "color",
+        "$value": "#333333"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#666666"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#999999"
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "black": {
+        "$type": "color",
+        "$value": "#000000"
+      }
+    },
+    "red": {
+      "300": {
+        "$type": "color",
+        "$value": "#ff3333"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#ff6666"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#ff9999"
       }
     }
   },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      ""
+      "",
+      "color"
     ]
   }
 }
