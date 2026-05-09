@@ -1,54 +1,94 @@
 {
   "": {},
   "color": {
-    "blue": {
-      "300": {
-        "$type": "color",
-        "$value": "#3333ff"
+    "core": {
+      "blue": {
+        "300": {
+          "$type": "color",
+          "$value": "#3333ff"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "#6666ff"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "#9999ff"
+        }
       },
-      "600": {
-        "$type": "color",
-        "$value": "#6666ff"
+      "neutral": {
+        "300": {
+          "$type": "color",
+          "$value": "#333333"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "#666666"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "#999999"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "black": {
+          "$type": "color",
+          "$value": "#000000"
+        }
       },
-      "900": {
-        "$type": "color",
-        "$value": "#9999ff"
+      "red": {
+        "300": {
+          "$type": "color",
+          "$value": "#ff3333"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "#ff6666"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "#ff9999"
+        }
       }
     },
-    "neutral": {
-      "300": {
-        "$type": "color",
-        "$value": "#333333"
+    "semantic": {
+      "dark": {
+        "primary-color": {
+          "$type": "color",
+          "$value": "#333333"
+        },
+        "secondary-color": {
+          "$type": "color",
+          "$value": "#999999"
+        },
+        "primary-background-color": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
+        "secondary-background-color": {
+          "$type": "color",
+          "$value": "#000000"
+        }
       },
-      "600": {
-        "$type": "color",
-        "$value": "#666666"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#999999"
-      },
-      "white": {
-        "$type": "color",
-        "$value": "#ffffff"
-      },
-      "black": {
-        "$type": "color",
-        "$value": "#000000"
-      }
-    },
-    "red": {
-      "300": {
-        "$type": "color",
-        "$value": "#ff3333"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#ff6666"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#ff9999"
+      "light": {
+        "primary-color": {
+          "$type": "color",
+          "$value": "#999999"
+        },
+        "secondary-color": {
+          "$type": "color",
+          "$value": "#333333"
+        },
+        "primary-background-color": {
+          "$type": "color",
+          "$value": "#000000"
+        },
+        "secondary-background-color": {
+          "$type": "color",
+          "$value": "#ffffff"
+        }
       }
     }
   },
