@@ -1,5 +1,5 @@
 {
-  "semantic-colors/dark/values": {
+  "semantic/colors/dark/values": {
     "primary-text-color": {
       "$extensions": {
         "com.figma.scopes": [
@@ -51,7 +51,7 @@
       "$value": "{600}"
     }
   },
-  "semantic-colors/light/values": {
+  "semantic/colors/light/values": {
     "primary-text-color": {
       "$extensions": {
         "com.figma.scopes": [
@@ -103,7 +103,7 @@
       "$value": "{600}"
     }
   },
-  "core-colors/all/values": {
+  "core/colors/all/values": {
     "300": {
       "$extensions": {
         "com.figma.scopes": [
@@ -158,9 +158,9 @@
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "semantic-colors/dark/values",
-      "semantic-colors/light/values",
-      "core-colors/all/values"
+      "semantic/colors/dark/values",
+      "semantic/colors/light/values",
+      "core/colors/all/values"
     ]
   }
 }
