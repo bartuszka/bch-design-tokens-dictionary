@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "node build.js",
+    "figma:archive": "node tools/token-archivist.js",
+    "figma:clean": "node tools/token-cleaner.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
