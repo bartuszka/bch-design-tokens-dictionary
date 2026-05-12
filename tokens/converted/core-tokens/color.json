@@ -1,0 +1,34 @@
+{
+  "white": {
+    "$type": "color",
+    "$value": "#ffffff"
+  },
+  "black": {
+    "$type": "color",
+    "$value": "#000000"
+  },
+  "neutral-300": {
+    "$type": "color",
+    "$value": "#333333"
+  },
+  "neutral-600": {
+    "$type": "color",
+    "$value": "#666666"
+  },
+  "neutral-900": {
+    "$type": "color",
+    "$value": "#999999"
+  },
+  "blue-300": {
+    "$type": "color",
+    "$value": "#3333ff"
+  },
+  "blue-600": {
+    "$type": "color",
+    "$value": "#6666ff"
+  },
+  "blue-900": {
+    "$type": "color",
+    "$value": "#9999ff"
+  }
+}
