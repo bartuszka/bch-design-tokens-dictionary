@@ -8,6 +8,7 @@
     "figma:archive": "node tools/token-archivist.js",
     "figma:clean": "node tools/token-cleaner.js",
     "figma:split": "node tools/token-splitter.js",
+    "core-styles:create": "node tools/core-styles-creator.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"

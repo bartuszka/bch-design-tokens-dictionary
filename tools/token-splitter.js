@@ -4,11 +4,11 @@ const path = require('node:path');
 const sourcePath = path.resolve(__dirname, '../tokens/converted/clean-figma-tokens/figma-tokens.json');
 const outputGroups = [
     {
-        prefix: '#core-',
+        prefix: 'core-',
         directoryPath: path.resolve(__dirname, '../tokens/converted/core-tokens'),
     },
     {
-        prefix: '#decision-',
+        prefix: 'decision-',
         directoryPath: path.resolve(__dirname, '../tokens/converted/decision-tokens'),
     },
 ];

@@ -1,5 +1,5 @@
 {
-  "#core-color": {
+  "core-color": {
     "white": {
       "$type": "color",
       "$value": "#ffffff"
@@ -33,34 +33,38 @@
       "$value": "#9999ff"
     }
   },
-  "#decision-color": {
+  "decision-color": {
     "text-color-primary": {
       "$type": "color",
       "$value": {
-        "dark": "{#core-color.black}",
-        "light": "{#core-color.neutral-900}"
-      }
+        "dark": "{core-color.black}",
+        "light": "{core-color.neutral-900}"
+      },
+      "$description": "Primary color for text"
     },
     "text-color-secondary": {
       "$type": "color",
       "$value": {
-        "dark": "{#core-color.white}",
-        "light": "{#core-color.neutral-300}"
-      }
+        "dark": "{core-color.white}",
+        "light": "{core-color.neutral-300}"
+      },
+      "$description": "Secondary color for text"
     },
     "background-color": {
       "$type": "color",
       "$value": {
-        "dark": "{#core-color.white}",
-        "light": "{#core-color.neutral-300}"
-      }
+        "dark": "{core-color.white}",
+        "light": "{core-color.neutral-300}"
+      },
+      "$description": "Primary color for backgrounds"
     },
     "header-color": {
       "$type": "color",
       "$value": {
-        "dark": "{#core-color.blue-300}",
-        "light": "{#core-color.blue-900}"
-      }
+        "dark": "{core-color.blue-300}",
+        "light": "{core-color.blue-900}"
+      },
+      "$description": "Secondary color for backgrounds"
     }
   }
 }
