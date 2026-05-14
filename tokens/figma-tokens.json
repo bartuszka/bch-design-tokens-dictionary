@@ -54,11 +54,17 @@
   "decision-color-background": {
     "background-color-primary": {
       "$type": "color",
-      "$value": "{core-color.white}"
+      "$value": {
+        "dark": "{core-color.white}",
+        "light": "{core-color.black}"
+      }
     },
     "background-color-secondary": {
       "$type": "color",
-      "$value": "{core-color.black}"
+      "$value": {
+        "dark": "{core-color.black}",
+        "light": "{core-color.white}"
+      }
     }
   },
   "core-spacing": {
