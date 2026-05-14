@@ -61,12 +61,72 @@
       "$value": "{core-color.black}"
     }
   },
+  "core-spacing": {
+    "spacing-2": {
+      "$type": "number",
+      "$value": 2
+    },
+    "spacing-5": {
+      "$type": "number",
+      "$value": 5
+    },
+    "spacing-10": {
+      "$type": "number",
+      "$value": 10
+    },
+    "spacing-15": {
+      "$type": "number",
+      "$value": 15
+    },
+    "spacing-20": {
+      "$type": "number",
+      "$value": 20
+    },
+    "spacing-25": {
+      "$type": "number",
+      "$value": 25
+    }
+  },
+  "decision-spacing-box": {
+    "spacing-box-xs": {
+      "$type": "number",
+      "$value": "{core-spacing.spacing-2}",
+      "$description": "2 px spacing for boxex"
+    },
+    "spacing-box-s": {
+      "$type": "number",
+      "$value": "{core-spacing.spacing-5}",
+      "$description": "5 px spacing for boxex"
+    },
+    "spacing-box-m": {
+      "$type": "number",
+      "$value": "{core-spacing.spacing-10}",
+      "$description": "10 px spacing for boxex"
+    },
+    "spacing-box-l": {
+      "$type": "number",
+      "$value": "{core-spacing.spacing-15}",
+      "$description": "15 px spacing for boxex"
+    },
+    "spacing-box-xl": {
+      "$type": "number",
+      "$value": "{core-spacing.spacing-20}",
+      "$description": "20 px spacing for boxex"
+    },
+    "spacing-box-xxl": {
+      "$type": "number",
+      "$value": "{core-spacing.spacing-25}",
+      "$description": "25 px spacing for boxex"
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "core-color",
       "decision-color-text",
-      "decision-color-background"
+      "decision-color-background",
+      "core-spacing",
+      "decision-spacing-box"
     ]
   }
 }
