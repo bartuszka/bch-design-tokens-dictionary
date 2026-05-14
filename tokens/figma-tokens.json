@@ -33,11 +33,11 @@
       "$value": "#9999ff"
     }
   },
-  "decision-color": {
+  "decision-color-text": {
     "text-color-primary": {
       "$type": "color",
       "$value": {
-        "dark": "{core-color.black}",
+        "dark": "{core-color.neutral-300}",
         "light": "{core-color.neutral-900}"
       },
       "$description": "Primary color for text"
@@ -45,33 +45,28 @@
     "text-color-secondary": {
       "$type": "color",
       "$value": {
-        "dark": "{core-color.white}",
+        "dark": "{core-color.neutral-900}",
         "light": "{core-color.neutral-300}"
       },
       "$description": "Secondary color for text"
-    },
-    "background-color": {
+    }
+  },
+  "decision-color-background": {
+    "background-color-primary": {
       "$type": "color",
-      "$value": {
-        "dark": "{core-color.white}",
-        "light": "{core-color.neutral-300}"
-      },
-      "$description": "Primary color for backgrounds"
+      "$value": "{core-color.white}"
     },
-    "header-color": {
+    "background-color-secondary": {
       "$type": "color",
-      "$value": {
-        "dark": "{core-color.blue-300}",
-        "light": "{core-color.blue-900}"
-      },
-      "$description": "Secondary color for backgrounds"
+      "$value": "{core-color.black}"
     }
   },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "core-color",
-      "decision-color"
+      "decision-color-text",
+      "decision-color-background"
     ]
   }
 }
