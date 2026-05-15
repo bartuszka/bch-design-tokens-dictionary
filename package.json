@@ -9,6 +9,7 @@
     "figma:clean": "node tools/token-cleaner.js",
     "figma:split": "node tools/token-splitter.js",
     "core-styles:create": "node tools/core-styles-creator.js",
+    "decision-tokens:create": "node tools/decision-tokens-creator.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
