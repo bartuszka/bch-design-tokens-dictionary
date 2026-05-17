@@ -12,6 +12,7 @@
     "decision-tokens:create": "node tools/decision-tokens-creator.js",
     "web-tokens:create": "node tools/web-tokens-creator.js",
     "library-tokens:create": "node tools/library-tokens-creator.js",
+    "summary-tokens:create": "node tools/summary-tokens-creator.js",
     "design-tokens:create": "node tools/design-tokens-creator.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
