@@ -1,7 +1,7 @@
 const { mkdir, readdir, readFile, writeFile } = require('node:fs/promises');
 const path = require('node:path');
 
-const sourceDirectoryPath = path.resolve(__dirname, '../tokens/converted/decision-tokens');
+const sourceDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens/decision-tokens');
 const outputDirectoryPath = path.resolve(__dirname, '../tokens/converted/src');
 
 const header = `/** Design Language Configuration

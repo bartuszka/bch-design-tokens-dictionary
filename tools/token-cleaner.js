@@ -4,7 +4,7 @@ const path = require('node:path');
 const removedNames = ['$themes', '$metadata'];
 
 const sourcePath = path.resolve(__dirname, '../tokens/figma-tokens.json');
-const cleanDirectoryPath = path.resolve(__dirname, '../tokens/converted/clean-figma-tokens');
+const cleanDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens/clean-figma-tokens');
 const cleanPath = path.join(cleanDirectoryPath, path.basename(sourcePath));
 
 function removeObjectsByName(value, namesToRemove) {

@@ -1,7 +1,7 @@
 const { mkdir, readdir, readFile, writeFile } = require('node:fs/promises');
 const path = require('node:path');
 
-const sourceDirectoryPath = path.resolve(__dirname, '../tokens/converted/core-tokens');
+const sourceDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens/core-tokens');
 const outputDirectoryPath = path.resolve(__dirname, '../tokens/converted/src');
 
 function isToken(value) {

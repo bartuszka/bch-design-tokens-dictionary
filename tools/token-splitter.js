@@ -1,15 +1,15 @@
 const { mkdir, readFile, writeFile } = require('node:fs/promises');
 const path = require('node:path');
 
-const sourcePath = path.resolve(__dirname, '../tokens/converted/clean-figma-tokens/figma-tokens.json');
+const sourcePath = path.resolve(__dirname, '../tokens/json-tokens/clean-figma-tokens/figma-tokens.json');
 const outputGroups = [
     {
         prefix: 'core-',
-        directoryPath: path.resolve(__dirname, '../tokens/converted/core-tokens'),
+        directoryPath: path.resolve(__dirname, '../tokens/json-tokens/core-tokens'),
     },
     {
         prefix: 'decision-',
-        directoryPath: path.resolve(__dirname, '../tokens/converted/decision-tokens'),
+        directoryPath: path.resolve(__dirname, '../tokens/json-tokens/decision-tokens'),
     },
 ];
 
