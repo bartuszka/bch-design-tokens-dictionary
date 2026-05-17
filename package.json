@@ -10,6 +10,9 @@
     "figma:split": "node tools/token-splitter.js",
     "core-styles:create": "node tools/core-styles-creator.js",
     "decision-tokens:create": "node tools/decision-tokens-creator.js",
+    "web-tokens:create": "node tools/web-tokens-creator.js",
+    "library-tokens:create": "node tools/library-tokens-creator.js",
+    "design-tokens:create": "node tools/design-tokens-creator.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
