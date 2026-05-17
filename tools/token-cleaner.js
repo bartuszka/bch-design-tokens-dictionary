@@ -4,7 +4,8 @@ const path = require('node:path');
 const removedNames = ['$themes', '$metadata'];
 
 const sourcePath = path.resolve(__dirname, '../tokens/figma-tokens.json');
-const cleanDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens/clean-figma-tokens');
+const jsonTokensDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens');
+const cleanDirectoryPath = path.join(jsonTokensDirectoryPath, 'clean-figma-tokens');
 const cleanPath = path.join(cleanDirectoryPath, path.basename(sourcePath));
 
 function removeObjectsByName(value, namesToRemove) {
@@ -27,6 +28,7 @@ async function cleanFigmaTokens(namesToRemove = removedNames) {
     const figmaTokens = JSON.parse(await readFile(sourcePath, 'utf8'));
     const cleanFigmaTokens = removeObjectsByName(figmaTokens, namesToRemove);
 
+    await mkdir(jsonTokensDirectoryPath, { recursive: true });
     await mkdir(cleanDirectoryPath, { recursive: true });
     await writeFile(cleanPath, `${JSON.stringify(cleanFigmaTokens, null, 2)}\n`);
 

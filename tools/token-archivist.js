@@ -2,10 +2,12 @@ const { copyFile, mkdir } = require('node:fs/promises');
 const path = require('node:path');
 
 const sourcePath = path.resolve(__dirname, '../tokens/figma-tokens.json');
-const archiveDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens/archived-figma-tokens');
+const jsonTokensDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens');
+const archiveDirectoryPath = path.join(jsonTokensDirectoryPath, 'archived-figma-tokens');
 const archivePath = path.join(archiveDirectoryPath, path.basename(sourcePath));
 
 async function archiveFigmaToken() {
+    await mkdir(jsonTokensDirectoryPath, { recursive: true });
     await mkdir(archiveDirectoryPath, { recursive: true });
     await copyFile(sourcePath, archivePath);
 

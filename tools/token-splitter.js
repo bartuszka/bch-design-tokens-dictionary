@@ -1,15 +1,17 @@
 const { mkdir, readFile, writeFile } = require('node:fs/promises');
 const path = require('node:path');
 
-const sourcePath = path.resolve(__dirname, '../tokens/json-tokens/clean-figma-tokens/figma-tokens.json');
+const jsonTokensDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens');
+const cleanDirectoryPath = path.join(jsonTokensDirectoryPath, 'clean-figma-tokens');
+const sourcePath = path.join(cleanDirectoryPath, 'figma-tokens.json');
 const outputGroups = [
     {
         prefix: 'core-',
-        directoryPath: path.resolve(__dirname, '../tokens/json-tokens/core-tokens'),
+        directoryPath: path.join(jsonTokensDirectoryPath, 'core-tokens'),
     },
     {
         prefix: 'decision-',
-        directoryPath: path.resolve(__dirname, '../tokens/json-tokens/decision-tokens'),
+        directoryPath: path.join(jsonTokensDirectoryPath, 'decision-tokens'),
     },
 ];
 
@@ -22,6 +24,13 @@ function getOutputFileName(tokenSetName, prefix) {
 }
 
 async function splitFigmaTokens() {
+    await mkdir(jsonTokensDirectoryPath, { recursive: true });
+    await mkdir(cleanDirectoryPath, { recursive: true });
+
+    for (const { directoryPath } of outputGroups) {
+        await mkdir(directoryPath, { recursive: true });
+    }
+
     const figmaTokens = JSON.parse(await readFile(sourcePath, 'utf8'));
     const writtenPaths = [];
 
@@ -31,8 +40,6 @@ async function splitFigmaTokens() {
         if (!outputGroup) {
             continue;
         }
-
-        await mkdir(outputGroup.directoryPath, { recursive: true });
 
         const outputPath = path.join(
             outputGroup.directoryPath,

@@ -1,7 +1,8 @@
 const { mkdir, readdir, readFile, writeFile } = require('node:fs/promises');
 const path = require('node:path');
 
-const sourceDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens/core-tokens');
+const jsonTokensDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens');
+const sourceDirectoryPath = path.join(jsonTokensDirectoryPath, 'core-tokens');
 const outputDirectoryPath = path.resolve(__dirname, '../tokens/converted/src');
 
 function isToken(value) {
@@ -67,6 +68,9 @@ async function createCoreStyleFile(fileName) {
 }
 
 async function coreStylesCreator() {
+    await mkdir(jsonTokensDirectoryPath, { recursive: true });
+    await mkdir(sourceDirectoryPath, { recursive: true });
+
     const coreTokenFiles = await getCoreTokenFiles(sourceDirectoryPath);
     const writtenPaths = [];
 

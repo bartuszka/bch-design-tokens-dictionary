@@ -1,7 +1,8 @@
 const { mkdir, readdir, readFile, writeFile } = require('node:fs/promises');
 const path = require('node:path');
 
-const sourceDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens/decision-tokens');
+const jsonTokensDirectoryPath = path.resolve(__dirname, '../tokens/json-tokens');
+const sourceDirectoryPath = path.join(jsonTokensDirectoryPath, 'decision-tokens');
 const outputDirectoryPath = path.resolve(__dirname, '../tokens/converted/src');
 
 const header = `/** Design Language Configuration
@@ -149,6 +150,9 @@ async function createDecisionStyleFile(fileName) {
 }
 
 async function decisionTokensCreator() {
+    await mkdir(jsonTokensDirectoryPath, { recursive: true });
+    await mkdir(sourceDirectoryPath, { recursive: true });
+
     const decisionTokenFiles = await getDecisionTokenFiles(sourceDirectoryPath);
     const writtenPaths = [];
 
