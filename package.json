@@ -9,6 +9,8 @@
     "figma:clean": "node tools/token-cleaner.js",
     "figma:split": "node tools/token-splitter.js",
     "core-styles:create": "node tools/core-styles-creator.js",
+    "core-web-tokens:create": "node tools/core-web-tokens-creator.js",
+    "core-library-tokens:create": "node tools/core-library-tokens-creator.js",
     "decision-tokens:create": "node tools/decision-tokens-creator.js",
     "web-tokens:create": "node tools/web-tokens-creator.js",
     "library-tokens:create": "node tools/library-tokens-creator.js",

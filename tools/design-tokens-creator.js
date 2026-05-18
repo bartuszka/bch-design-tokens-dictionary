@@ -6,6 +6,7 @@ const { decisionTokensCreator } = require('./decision-tokens-creator');
 const { webTokensCreator } = require('./web-tokens-creator');
 const {libraryTokensCreator} = require("./library-tokens-creator");
 const { summaryTokensCreator } = require('./summary-tokens-creator');
+const {coreLibraryTokensCreator} = require("./core-library-tokens-creator");
 
 async function designTokensCreator() {
     const archivedTokenPath = await archiveFigmaToken();
@@ -15,6 +16,7 @@ async function designTokensCreator() {
     const decisionStylePaths = await decisionTokensCreator();
     const webTokensPaths = await webTokensCreator();
     const libraryTokensPaths = await libraryTokensCreator();
+    const coreLibraryTokensPaths = await coreLibraryTokensCreator();
     const summaryTokensPaths = await summaryTokensCreator();
 
     return {
@@ -25,6 +27,7 @@ async function designTokensCreator() {
         decisionStylePaths,
         webTokensPaths,
         libraryTokensPaths,
+        coreLibraryTokensPaths,
         summaryTokensPaths,
     };
 }
