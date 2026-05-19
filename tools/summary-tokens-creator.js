@@ -41,18 +41,26 @@ function getImportPath(sourceFilePath, destinationDirectoryPath) {
     return relativePath.startsWith('.') ? relativePath : `./${relativePath}`;
 }
 
-function getSassNamespace(sourceFileName) {
+function getSassNamespace(sourceFilePath) {
     return path
-        .basename(sourceFileName, '.scss')
+        .basename(sourceFilePath, '.scss')
         .replace(/^_/, '');
 }
 
-function formatSummaryScss(scssFilePaths) {
+function getGeneralStyleFileName(sourceFolderName, webSourceSubfolderName = '') {
+    const fileBaseName = webSourceSubfolderName
+        ? `${sourceFolderName}-${webSourceSubfolderName}`
+        : sourceFolderName;
+
+    return `${fileBaseName}.scss`;
+}
+
+function formatSummaryScss(scssFilePaths, destinationDirectoryPath) {
     const imports = scssFilePaths
         .map((scssFilePath) => `@use "${getImportPath(scssFilePath, destinationDirectoryPath)}";`)
         .join('\n');
     const includes = scssFilePaths
-        .map((scssFilePath) => `  @include ${getSassNamespace(path.basename(scssFilePath))}.tokens;`)
+        .map((scssFilePath) => `  @include ${getSassNamespace(scssFilePath)}.tokens;`)
         .join('\n');
 
     return `${imports}
@@ -69,34 +77,35 @@ async function collectSummaryTokenFileGroups() {
 
     for (const sourceFolderName of sourceFolderNames) {
         const sourceFolderPath = path.join(sourceDirectoryPath, sourceFolderName);
-        const webDirectoryPath = path.join(sourceFolderPath, 'web');
+        const webSourceFolderPath = path.join(sourceFolderPath, 'web');
 
-        if (!await pathExists(webDirectoryPath)) {
+        if (!await pathExists(webSourceFolderPath)) {
             continue;
         }
 
-        const directScssFileNames = await getScssFiles(webDirectoryPath);
+        const directScssFileNames = await getScssFiles(webSourceFolderPath);
 
         if (directScssFileNames.length > 0) {
             fileGroups.push({
-                fileName: `${sourceFolderName}.scss`,
-                scssFilePaths: directScssFileNames.map((scssFileName) => path.join(webDirectoryPath, scssFileName)),
+                fileName: getGeneralStyleFileName(sourceFolderName),
+                scssFilePaths: directScssFileNames.map((scssFileName) => path.join(webSourceFolderPath, scssFileName)),
             });
         }
 
-        const subfolderNames = await getDirectories(webDirectoryPath);
+        const webSourceSubfolderNames = await getDirectories(webSourceFolderPath);
 
-        for (const subfolderName of subfolderNames) {
-            const subfolderPath = path.join(webDirectoryPath, subfolderName);
-            const scssFileNames = await getScssFiles(subfolderPath);
+        for (const webSourceSubfolderName of webSourceSubfolderNames) {
+            const webSourceSubfolderPath = path.join(webSourceFolderPath, webSourceSubfolderName);
+            const subfolderScssFileNames = await getScssFiles(webSourceSubfolderPath);
 
-            if (scssFileNames.length === 0) {
+            if (subfolderScssFileNames.length === 0) {
                 continue;
             }
 
             fileGroups.push({
-                fileName: `${sourceFolderName}-${subfolderName}.scss`,
-                scssFilePaths: scssFileNames.map((scssFileName) => path.join(subfolderPath, scssFileName)),
+                fileName: getGeneralStyleFileName(sourceFolderName, webSourceSubfolderName),
+                scssFilePaths: subfolderScssFileNames
+                    .map((scssFileName) => path.join(webSourceSubfolderPath, scssFileName)),
             });
         }
     }
@@ -113,7 +122,7 @@ async function summaryTokensCreator() {
     for (const { fileName, scssFilePaths } of fileGroups) {
         const destinationFilePath = path.join(destinationDirectoryPath, fileName);
 
-        await writeFile(destinationFilePath, formatSummaryScss(scssFilePaths));
+        await writeFile(destinationFilePath, formatSummaryScss(scssFilePaths, destinationDirectoryPath));
         writtenPaths.push(destinationFilePath);
     }
 
@@ -132,6 +141,7 @@ if (require.main === module) {
 module.exports = {
     collectSummaryTokenFileGroups,
     formatSummaryScss,
+    getGeneralStyleFileName,
     summaryTokensCreator,
     'summary-tokens-creator': summaryTokensCreator,
 };

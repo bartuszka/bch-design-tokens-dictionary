@@ -55,8 +55,9 @@ function getSassNamespace(sourceFileName) {
 function getTokenBaseName(sourceFileName) {
     return path
         .basename(sourceFileName, '.scss')
-        .replace(/^_decision-/, '')
-        .replace(/^decision-/, '');
+        .replace(/^_/, '')
+        // .replace(/^_decision-/, '')
+        // .replace(/^decision-/, '');
 }
 
 function getRemainingVariableParts(tokenBaseName, variableName) {
@@ -78,7 +79,9 @@ function getRemainingVariableParts(tokenBaseName, variableName) {
 function getCustomPropertyName(sourceFileName, variableName) {
     const tokenBaseName = getTokenBaseName(sourceFileName);
     const remainingParts = getRemainingVariableParts(tokenBaseName, variableName);
-    const suffix = remainingParts.length > 0 ? `-${remainingParts.join('-')}` : '';
+    console.log('variableName', variableName)
+    // const suffix = remainingParts.length > 0 ? `-${remainingParts.join('-')}` : '';
+    const suffix = remainingParts.length > 0 ? `-${variableName.split('$')[1]}` : '';
 
     return `--bch-${tokenBaseName}${suffix}`;
 }
@@ -143,7 +146,7 @@ function formatWebScss(sourceFileName, sourceFilePath, destinationDirectoryPath,
         })
         .join('\n\n');
 
-    return `@use "${importPath}" as ${namespace};
+    return `@use "${importPath}";
 
 @mixin tokens {
 ${customProperties}
