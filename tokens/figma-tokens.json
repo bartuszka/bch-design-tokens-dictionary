@@ -38,7 +38,7 @@
       "$type": "color",
       "$value": {
         "dark": "{core-color.neutral-300}",
-        "light": "{core-color.neutral-900}"
+        "light": "{core-color.white}"
       },
       "$description": "Primary color for text"
     },
@@ -56,7 +56,7 @@
       "$type": "color",
       "$value": {
         "dark": "{core-color.white}",
-        "light": "{core-color.black}"
+        "light": "{core-color.blue-600}"
       }
     },
     "background-color-secondary": {
