@@ -119,21 +119,21 @@
     "background-button-primary": {
       "$type": "color",
       "$value": {
-        "lihgt": "{core-color.blue-700}",
+        "light": "{core-color.blue-700}",
         "dark": "{core-color.blue-200}"
       }
     },
     "background-button-secondary": {
       "$type": "color",
       "$value": {
-        "lihgt": "{core-color.blue-400}",
+        "light": "{core-color.blue-400}",
         "dark": "{core-color.blue-400}"
       }
     },
     "background-button-tertiary": {
       "$type": "color",
       "$value": {
-        "lihgt": "{core-color.blue-200}",
+        "light": "{core-color.blue-200}",
         "dark": "{core-color.blue-800}"
       }
     }
