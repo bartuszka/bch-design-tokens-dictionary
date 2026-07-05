@@ -263,7 +263,7 @@
       }
     }
   },
-  "core-border-radius": {
+  "core-radius": {
     "s": {
       "$type": "number",
       "$value": 4
@@ -277,18 +277,18 @@
       "$value": 9
     }
   },
-  "decision-border-radius": {
+  "decision-radius-border": {
     "small": {
       "$type": "number",
-      "$value": "{core-border-radius.s}"
+      "$value": "{core-radius.s}"
     },
     "medium": {
       "$type": "number",
-      "$value": "{core-border-radius.m}"
+      "$value": "{core-radius.m}"
     },
     "large": {
       "$type": "number",
-      "$value": "{core-border-radius.l}"
+      "$value": "{core-radius.l}"
     }
   },
   "$themes": [],
@@ -302,8 +302,8 @@
       "core-font",
       "core-stroke",
       "decision-color-stroke",
-      "core-border-radius",
-      "decision-border-radius"
+      "core-radius",
+      "decision-radius-border"
     ]
   }
 }
