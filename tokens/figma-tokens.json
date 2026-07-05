@@ -8,62 +8,133 @@
       "$type": "color",
       "$value": "#000000"
     },
-    "neutral-300": {
+    "blue-900": {
       "$type": "color",
-      "$value": "#333333"
+      "$value": "#163142"
     },
-    "neutral-600": {
+    "blue-800": {
       "$type": "color",
-      "$value": "#666666"
+      "$value": "#204760"
     },
-    "neutral-900": {
+    "blue-700": {
       "$type": "color",
-      "$value": "#999999"
-    },
-    "blue-300": {
-      "$type": "color",
-      "$value": "#3333ff"
+      "$value": "#2a5e7e"
     },
     "blue-600": {
       "$type": "color",
-      "$value": "#6666ff"
+      "$value": "#337299"
     },
-    "blue-900": {
+    "blue-500": {
       "$type": "color",
-      "$value": "#9999ff"
+      "$value": "#3d88b8"
+    },
+    "blue-400": {
+      "$type": "color",
+      "$value": "#5399c6"
+    },
+    "blue-300": {
+      "$type": "color",
+      "$value": "#79b0d2"
+    },
+    "blue-200": {
+      "$type": "color",
+      "$value": "#9fc7df"
+    },
+    "blue-100": {
+      "$type": "color",
+      "$value": "#c6ddec"
+    },
+    "gray-900": {
+      "$type": "color",
+      "$value": "#222222"
+    },
+    "gray-800": {
+      "$type": "color",
+      "$value": "#333333"
+    },
+    "gray-700": {
+      "$type": "color",
+      "$value": "#444444"
+    },
+    "gray-600": {
+      "$type": "color",
+      "$value": "#555555"
+    },
+    "gray-500": {
+      "$type": "color",
+      "$value": "#666666"
+    },
+    "gray-400": {
+      "$type": "color",
+      "$value": "#777777"
+    },
+    "gray-300": {
+      "$type": "color",
+      "$value": "#999999"
+    },
+    "gray-200": {
+      "$type": "color",
+      "$value": "#bbbbbb"
+    },
+    "gray-100": {
+      "$type": "color",
+      "$value": "#dddddd"
     }
   },
   "decision-color-text": {
     "text-color-primary": {
       "$type": "color",
       "$value": {
-        "dark": "{core-color.neutral-300}",
-        "light": "{core-color.white}"
+        "light": "{core-color.gray-900}",
+        "dark": "{core-color.white}"
       },
-      "$description": "Primary color for text"
+      "$description": "Default text color primary"
     },
-    "text-color-secondary": {
+    "button-text-color-primary": {
       "$type": "color",
       "$value": {
-        "dark": "{core-color.neutral-900}",
-        "light": "{core-color.neutral-300}"
+        "light": "{core-color.white}",
+        "dark": "{core-color.gray-900}"
       },
-      "$description": "Secondary color for text"
+      "$description": "Default text color primary for buttons"
+    },
+    "button-text-color-secondary": {
+      "$type": "color",
+      "$value": {
+        "light": "{core-color.white}",
+        "dark": "{core-color.white}"
+      },
+      "$description": "Default text color secondary for buttons"
+    },
+    "button-text-color-tertiary": {
+      "$type": "color",
+      "$value": {
+        "light": "{core-color.white}",
+        "dark": "{core-color.blue-400}"
+      },
+      "$description": "Default text color tertiary for buttons"
     }
   },
   "decision-color-background": {
-    "background-color-primary": {
+    "background-button-primary": {
       "$type": "color",
       "$value": {
-        "dark": "{core-color.white}",
-        "light": "{core-color.blue-600}"
+        "lihgt": "{core-color.blue-700}",
+        "dark": "{core-color.blue-200}"
       }
     },
-    "background-color-secondary": {
+    "background-button-secondary": {
       "$type": "color",
       "$value": {
-        "dark": "{core-color.black}",
-        "light": "{core-color.white}"
+        "lihgt": "{core-color.blue-400}",
+        "dark": "{core-color.blue-400}"
+      }
+    },
+    "background-button-tertiary": {
+      "$type": "color",
+      "$value": {
+        "lihgt": "{core-color.blue-200}",
+        "dark": "{core-color.blue-800}"
       }
     }
   },
@@ -125,6 +196,101 @@
       "$description": "25 px spacing for boxex"
     }
   },
+  "core-font": {
+    "xxs": {
+      "$type": "number",
+      "$value": 8
+    },
+    "xs": {
+      "$type": "number",
+      "$value": 10
+    },
+    "s": {
+      "$type": "number",
+      "$value": 12
+    },
+    "m": {
+      "$type": "number",
+      "$value": 14
+    },
+    "l": {
+      "$type": "number",
+      "$value": 16
+    },
+    "xl": {
+      "$type": "number",
+      "$value": 20
+    },
+    "xxl": {
+      "$type": "number",
+      "$value": 26
+    }
+  },
+  "core-stroke": {
+    "s": {
+      "$type": "number",
+      "$value": 1
+    },
+    "m": {
+      "$type": "number",
+      "$value": 2
+    },
+    "l": {
+      "$type": "number",
+      "$value": 4
+    }
+  },
+  "decision-color-stroke": {
+    "stroke-button-primary": {
+      "$type": "color",
+      "$value": {
+        "light": "{core-color.black}",
+        "dark": "{core-color.blue-300}"
+      }
+    },
+    "stroke-button-secondary": {
+      "$type": "color",
+      "$value": {
+        "light": "{core-color.blue-600}",
+        "dark": "{core-color.blue-600}"
+      }
+    },
+    "stroke-button-tertiary": {
+      "$type": "color",
+      "$value": {
+        "light": "{core-color.blue-300}",
+        "dark": "{core-color.blue-900}"
+      }
+    }
+  },
+  "core-border-radius": {
+    "s": {
+      "$type": "number",
+      "$value": 4
+    },
+    "m": {
+      "$type": "number",
+      "$value": 7
+    },
+    "l": {
+      "$type": "number",
+      "$value": 9
+    }
+  },
+  "decision-border-radius": {
+    "small": {
+      "$type": "number",
+      "$value": "{core-border-radius.s}"
+    },
+    "medium": {
+      "$type": "number",
+      "$value": "{core-border-radius.m}"
+    },
+    "large": {
+      "$type": "number",
+      "$value": "{core-border-radius.l}"
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -132,7 +298,12 @@
       "decision-color-text",
       "decision-color-background",
       "core-spacing",
-      "decision-spacing-box"
+      "decision-spacing-box",
+      "core-font",
+      "core-stroke",
+      "decision-color-stroke",
+      "core-border-radius",
+      "decision-border-radius"
     ]
   }
 }
