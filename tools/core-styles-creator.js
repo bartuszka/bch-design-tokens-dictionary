@@ -6,7 +6,7 @@ const sourceDirectoryPath = path.join(jsonTokensDirectoryPath, 'core-tokens');
 const outputDirectoryPath = path.resolve(__dirname, '../tokens/converted/src');
 
 function isToken(value) {
-    return value && typeof value === 'object' && Object.hasOwn(value, '$value');
+    return value && typeof value === 'object' && Object.hasOwn(value, '$value') && Object.hasOwn(value, '$type');
 }
 
 function formatScssValue(value) {
@@ -30,7 +30,7 @@ function collectScssVariables(value, fileName, tokenPath = []) {
         return [
             {
                 name: getVariableName(fileName, tokenPath),
-                value: formatScssValue(value.$value),
+                value: `${ formatScssValue(value.$value) }${ value.$type === 'number' ? 'px' : '' }`,
             },
         ];
     }

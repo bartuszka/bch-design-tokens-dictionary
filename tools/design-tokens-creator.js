@@ -4,8 +4,8 @@ const { splitFigmaTokens } = require('./token-splitter');
 const { coreStylesCreator } = require('./core-styles-creator');
 const { coreWebTokensCreator } = require('./core-web-tokens-creator');
 const { decisionTokensCreator } = require('./decision-tokens-creator');
-const { webTokensCreator } = require('./web-tokens-creator');
-const {libraryTokensCreator} = require("./library-tokens-creator");
+const { decisionWebTokensCreator } = require('./decision-web-tokens-creator');
+const { libraryTokensCreator } = require("./library-tokens-creator");
 const { summaryTokensCreator } = require('./summary-tokens-creator');
 const { allTokensCreator } = require("./all-tokens-creator");
 
@@ -16,7 +16,7 @@ async function designTokensCreator() {
     const coreStylePaths = await coreStylesCreator();
     const decisionStylePaths = await decisionTokensCreator();
     const coreWebTokensPaths = await coreWebTokensCreator();
-    const webTokensPaths = await webTokensCreator();
+    const webTokensPaths = await decisionWebTokensCreator();
     const libraryTokensPaths = await libraryTokensCreator();
     const summaryTokensPaths = await summaryTokensCreator();
     const allTokensPaths = await allTokensCreator();

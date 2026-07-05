@@ -204,7 +204,7 @@ async function createWebTokenFile(sourceFileName, sourceModeDirectoryPath, desti
     return destinationFilePath;
 }
 
-async function webTokensCreator() {
+async function decisionWebTokensCreator() {
     const decisionTokenStyleFolderNames = await getDirectories(sourceDirectoryPath);
     const writtenPaths = [];
 
@@ -231,7 +231,7 @@ async function webTokensCreator() {
 }
 
 if (require.main === module) {
-    webTokensCreator().catch((error) => {
+    decisionWebTokensCreator().catch((error) => {
         console.error(error.message);
         process.exitCode = 1;
     });
@@ -239,6 +239,6 @@ if (require.main === module) {
 
 module.exports = {
     collectScssVariables,
-    webTokensCreator,
-    'web-tokens-creator': webTokensCreator,
+    decisionWebTokensCreator,
+    'web-tokens-creator': decisionWebTokensCreator,
 };
